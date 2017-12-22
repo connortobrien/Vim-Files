@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 " colorschemes
 Plug 'lifepillar/vim-solarized8'
+Plug 'morhetz/gruvbox'
 
 " general
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }

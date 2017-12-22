@@ -3,11 +3,12 @@ scriptencoding utf-8
 
 " set colorscheme
 set background=dark
-colorscheme solarized8
+let g:gruvbox_sign_column = 'bg0'
+silent! colorscheme gruvbox
 
 " lightline
 let g:lightline = {}
-let g:lightline.colorscheme = 'solarized'
+let g:lightline.colorscheme = 'gruvbox'
 let g:lightline.active = {}
 let g:lightline.active.left = [ [ 'mode', 'paste' ], [ 'gitbranch'], [ 'readonly', 'filename', 'modified' ] ]
 let g:lightline.active.right = [ [ 'lineinfo' ], [ 'percent' ], [ 'filetype' ] ]
