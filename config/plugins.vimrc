@@ -3,17 +3,12 @@ scriptencoding utf-8
 
 " set colorscheme
 set background=dark
-let g:gruvbox_sign_column = 'bg0'
-silent! colorscheme gruvbox
+let g:gruvbox_italic = 1
+let g:one_allow_italics = 1
+colorscheme one
 
-" lightline
-let g:lightline = {}
-let g:lightline.colorscheme = 'gruvbox'
-let g:lightline.active = {}
-let g:lightline.active.left = [ [ 'mode', 'paste' ], [ 'gitbranch'], [ 'readonly', 'filename', 'modified' ] ]
-let g:lightline.active.right = [ [ 'lineinfo' ], [ 'percent' ], [ 'filetype' ] ]
-let g:lightline.component_function = {}
-let g:lightline.component_function.gitbranch = 'fugitive#head'
+" airline
+let g:airline_powerline_fonts = 1
 
 " NERDTree
 autocmd StdinReadPre * let s:std_in=1
@@ -36,4 +31,15 @@ let g:user_emmet_settings = {
 " NERD Commenter
 let g:NERDSpaceDelims = 1
 
-" vimtex
+" vim-go
+let g:go_highlight_structs = 1 
+let g:go_highlight_methods = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_arguments = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_variable_declarations = 1
+let g:go_highlight_variable_assignments = 1

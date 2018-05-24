@@ -36,4 +36,3 @@ nnoremap <Left> :bprevious<CR>
 " quick travel between errors
 nmap <silent> <C-p> <Plug>(ale_previous_wrap)
 nmap <silent> <C-o> <Plug>(ale_next_wrap)
-
