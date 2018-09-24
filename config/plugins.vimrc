@@ -14,7 +14,7 @@ colorscheme NeoSolarized
 
 " airline
 let g:airline_powerline_fonts = 1
-let g:airline_colorscheme = "solarized"
+let g:airline_theme='solarized'
 
 " NERDTree
 autocmd StdinReadPre * let s:std_in=1

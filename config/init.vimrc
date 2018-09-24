@@ -27,11 +27,14 @@ Plug 'derekwyatt/vim-scala'
 Plug 'elzr/vim-json'
 " html
 Plug 'othree/html5.vim'
+" markdown
+Plug 'plasticboy/vim-markdown'
 " javascript
-Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'posva/vim-vue'
 " typescript
-Plug 'leafgarland/typescript-vim', { 'for': [ 'typescript', 'typescript.jsx' ] }
+Plug 'leafgarland/typescript-vim'
 " elixir
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
