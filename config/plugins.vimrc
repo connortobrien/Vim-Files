@@ -8,18 +8,41 @@ let g:neosolarized_bold = 1
 let g:neosolarized_underline = 1
 let g:neosolarized_italic = 1
 
+" vim-one
+let g:one_allow_italics = 1
+
+" gruvbox
+let g:gruvbox_italic = 1
+let g:gruvbox_sign_column = 'bg0'
+let g:gruvbox_italicize_strings = 1
+let g:gruvbox_invert_selection = 0
+let g:gruvbox_improved_warnings = 1
+
 " set colorscheme
 set background=dark
-colorscheme NeoSolarized
+colorscheme gruvbox
 
-" airline
-let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized'
+" lightline
+let g:lightline = {
+  \ 'colorscheme': 'gruvbox',
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste' ],
+  \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+  \ },
+  \ 'component_function': {
+  \   'gitbranch': 'fugitive#head'
+  \ },
+\ }
+
+" vim-gutentags
+let g:gutentags_cache_dir = '~/.vim/.tags_cache'
 
 " NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
 
 " ale
 let g:ale_javascript_eslint_executable='$(npm bin)/eslint'
