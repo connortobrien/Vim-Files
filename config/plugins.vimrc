@@ -8,9 +8,6 @@ let g:neosolarized_bold = 1
 let g:neosolarized_underline = 1
 let g:neosolarized_italic = 1
 
-" vim-one
-let g:one_allow_italics = 1
-
 " gruvbox
 let g:gruvbox_italic = 1
 let g:gruvbox_sign_column = 'bg0'

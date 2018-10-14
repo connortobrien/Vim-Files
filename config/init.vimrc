@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
 
 " colorschemes
 Plug 'icymind/NeoSolarized'
-Plug 'rakr/vim-one'
 Plug 'morhetz/gruvbox'
 
 " general
