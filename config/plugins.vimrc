@@ -1,27 +1,14 @@
 set encoding=utf-8
 scriptencoding utf-8
 
-" NeoSolarized
-let g:neosolarized_contrast = "high"
-let g:neosolarized_visibility = "low"
-let g:neosolarized_bold = 1
-let g:neosolarized_underline = 1
-let g:neosolarized_italic = 1
-
-" gruvbox
-let g:gruvbox_italic = 1
-let g:gruvbox_sign_column = 'bg0'
-let g:gruvbox_italicize_strings = 1
-let g:gruvbox_invert_selection = 0
-let g:gruvbox_improved_warnings = 1
-
 " set colorscheme
 set background=dark
-colorscheme gruvbox
+let ayucolor="mirage" " for mirage version of theme
+colorscheme ayu
 
 " lightline
 let g:lightline = {
-  \ 'colorscheme': 'gruvbox',
+  \ 'colorscheme': 'ayu',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -31,15 +18,12 @@ let g:lightline = {
   \ },
 \ }
 
-" vim-gutentags
-let g:gutentags_cache_dir = '~/.vim/.tags_cache'
-
 " NERDTree
-autocmd StdinReadPre * let s:std_in=1
+autocmd StdinReadPre * let s:std_in = 1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
+" let g:NERDTreeDirArrowExpandable = ''
+" let g:NERDTreeDirArrowCollapsible = ''
 
 " ale
 let g:ale_javascript_eslint_executable='$(npm bin)/eslint'

@@ -1,8 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
 " colorschemes
-Plug 'icymind/NeoSolarized'
-Plug 'morhetz/gruvbox'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'ayu-theme/ayu-vim'
 
 " general
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -16,14 +16,13 @@ Plug 'tpope/vim-commentary'
 Plug 'mattn/emmet-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'ludovicchabant/vim-gutentags'
+Plug 'benmills/vimux'
 
 " eye candy
 Plug 'itchyny/lightline.vim'
 
 " syntax
 Plug 'sheerun/vim-polyglot'
-
 
 " go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
