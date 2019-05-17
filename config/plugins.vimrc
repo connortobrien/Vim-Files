@@ -22,8 +22,7 @@ let g:lightline = {
 autocmd StdinReadPre * let s:std_in = 1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" let g:NERDTreeDirArrowExpandable = ''
-" let g:NERDTreeDirArrowCollapsible = ''
+let NERDTreeAutoDeleteBuffer = 1
 
 " ale
 let g:ale_javascript_eslint_executable='$(npm bin)/eslint'
