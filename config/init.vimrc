@@ -22,9 +22,9 @@ Plug 'benmills/vimux'
 Plug 'itchyny/lightline.vim'
 
 " syntax
-Plug 'sheerun/vim-polyglot'
-
-" go
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'leafgarland/typescript-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'fatih/vim-go'
 
 call plug#end()
