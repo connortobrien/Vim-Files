@@ -60,7 +60,7 @@ highlight Comment cterm=italic
 " tabs
 set tabstop=2
 set softtabstop=2
-set expandtab
+set noexpandtab
 set shiftround
 set smarttab
 set shiftwidth=2
