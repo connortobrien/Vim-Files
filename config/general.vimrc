@@ -6,10 +6,10 @@ set ttimeoutlen=100
 filetype plugin indent on
 syntax enable
 
-set t_Co=256
-if (has("termguicolors"))
+" set t_Co=256
+" if (has("termguicolors"))
   set termguicolors
-endif
+" endif
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
@@ -35,6 +35,7 @@ set undoreload=1000
 
 " Update buffer if file changes outside of vim, without prompt
 set autoread
+set autowrite
 
 " Wrap settings
 set wrap
@@ -60,7 +61,8 @@ highlight Comment cterm=italic
 " tabs
 set tabstop=2
 set softtabstop=2
-set noexpandtab
+" set noexpandtab
+set expandtab
 set shiftround
 set smarttab
 set shiftwidth=2
@@ -95,6 +97,6 @@ set wrapscan " Wrap to top of file after searching through full file
 " netrw
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
+let g:netrw_browse_split = 2
 let g:netrw_altv = 1
-let g:netrw_winsize = -28
+let g:netrw_winsize = 25

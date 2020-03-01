@@ -7,9 +7,7 @@ let ayucolor="mirage"
 " set colorscheme
 set background=dark
 
-colorscheme ayu
-:hi NERDTreeDir guifg=#80D4FF
-:hi NERDTreeFile guifg=#D9D7CE
+colorscheme nord
 
 " always show comments in italics
 hi Comment cterm=italic
@@ -25,17 +23,17 @@ let g:lightline = {
 			\   'gitbranch': 'gitbranch#name'
 			\ },
 		\ }
-let g:lightline.colorscheme = 'ayu'
-let g:lightline.separator = { 'left': '', 'right': '' }
-let g:lightline.subseparator = { 'left': '', 'right': '' }
+let g:lightline.colorscheme = 'nord'
+let g:lightline.separator = { 'left': "\uE0B0", 'right': "\uE0B2" }
+let g:lightline.subseparator = { 'left': "\uE0B1", 'right': "\uE0B3" }
 
 " NERDTree
 autocmd StdinReadPre * let s:std_in = 1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeAutoDeleteBuffer = 1
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
+" let g:NERDTreeDirArrowExpandable = ''
+" let g:NERDTreeDirArrowCollapsible = ''
 
 " ale
 let g:ale_sign_error = '✘'
@@ -79,6 +77,6 @@ let g:javascript_plugin_jsdoc = 1
 
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.jsx
 
-" limelight
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
+" rooter
+let g:rooter_change_directory_for_non_project_files = 'current'
+let g:rooter_patterns = ['Rakefile', 'package.json', '.git/']

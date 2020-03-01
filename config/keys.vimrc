@@ -39,15 +39,3 @@ nnoremap <Left> :bprevious<CR>
 " quick travel between errors
 nmap <silent> <C-p> <Plug>(ale_previous_wrap)
 nmap <silent> <C-o> <Plug>(ale_next_wrap)
-
-" Prompt for a command to run
-map <Leader>vp :VimuxPromptCommand<CR>
-map <Leader>vm :VimuxPromptCommand("make ")<CR>
-" Run last command executed by VimuxRunCommand
-map <Leader>vl :VimuxRunLastCommand<CR>
-" Inspect runner pane
-map <Leader>vi :VimuxInspectRunner<CR>
-" Zoom the tmux runner pane
-map <Leader>vz :VimuxZoomRunner<CR>
-" Close the tmux runner pane
-map <Leader>vc :VimuxCloseRunner<CR>
