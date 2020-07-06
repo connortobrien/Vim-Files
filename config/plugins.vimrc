@@ -1,6 +1,9 @@
 set encoding=utf-8
 scriptencoding utf-8
 
+" coc
+let g:coc_global_extensions = [ 'coc-go', 'coc-tsserver' ]
+
 " ayu
 let ayucolor="mirage"
 
@@ -32,16 +35,21 @@ autocmd StdinReadPre * let s:std_in = 1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeAutoDeleteBuffer = 1
-" let g:NERDTreeDirArrowExpandable = ''
-" let g:NERDTreeDirArrowCollapsible = ''
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
 
 " ale
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
-" let b:ale_fixers = {'javascript': ['eslint']}
+let g:ale_linters_explicit = 1
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\ 'javascript': ['eslint', 'prettier'],
+\ 'typescript': ['eslint', 'prettier'],
+\ 'css': ['prettier'],
+\}
 highlight ALEErrorSign ctermbg=NONE ctermfg=red
 highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
-" let g:ale_javascript_eslint_executable='$(npm bin)/eslint'
 
 " vim-jsx config
 let g:jsx_ext_required = 0
@@ -64,6 +72,7 @@ let g:go_highlight_function_arguments = 1
 let g:go_highlight_function_calls = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
+let g:go_highlight_extra_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_variable_declarations = 1
@@ -75,7 +84,7 @@ let g:mix_format_on_save = 1
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
 
-autocmd BufNewFile,BufRead *.tsx set filetype=typescript.jsx
+" autocmd BufNewFile,BufRead *.tsx set filetype=typescript.jsx
 
 " rooter
 let g:rooter_change_directory_for_non_project_files = 'current'
