@@ -16,7 +16,7 @@ endif
 set number
 set relativenumber
 set list
-set listchars=tab:▸\ ,trail:•,extends:⟩,precedes:⟨
+set listchars=tab:▏\ ,trail:•,extends:⟩,precedes:⟨
 set showbreak=↪\ " show break with space
 
 " allow backspacing over everything in insert mode
@@ -61,8 +61,8 @@ highlight Comment cterm=italic
 " tabs
 set tabstop=2
 set softtabstop=2
-" set noexpandtab
-set expandtab
+set noexpandtab
+" set expandtab
 set shiftround
 set smarttab
 set shiftwidth=2
