@@ -1,9 +1,9 @@
 call plug#begin('~/.vim/plugged')
 
 " colorschemes
-Plug 'arcticicestudio/nord-vim'
+Plug 'nordtheme/vim'
 Plug 'ayu-theme/ayu-vim'
-" Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 
 " general
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
